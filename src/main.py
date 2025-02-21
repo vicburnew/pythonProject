@@ -24,6 +24,8 @@ def divide(a, b):
         return  a / b
     return 0
 
+def reverse_list(lst):
+    return lst[::-1]
 
 
 
