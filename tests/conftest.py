@@ -8,3 +8,11 @@ def numbers():
 @pytest.fixture
 def letters():
     return "hello"
+
+@pytest.fixture
+def numbers_2():
+    return "87654321"
+
+@pytest.fixture
+def letters_2():
+    return "olleh"
