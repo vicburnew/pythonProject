@@ -16,3 +16,4 @@ if __name__ == "__main__":
 
     assert find_max([1, 2, 3, 4, 5]) == 5
     assert find_max([]) == 0
+
