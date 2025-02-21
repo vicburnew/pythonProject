@@ -12,3 +12,10 @@ def test_reverse_list_numbers():
 
 def test_reverse_list_letters():
     assert reverse_list("hello") == "olleh"
+
+def test_reverse_list_numbers(numbers):
+    assert reverse_list(numbers) == "321"
+
+def test_reverse_list_letters(letters):
+    assert reverse_list(letters) == "olleh"
+
