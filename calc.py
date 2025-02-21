@@ -16,5 +16,9 @@ def divide(a, b):
     return a / b
 
 def calc_log(a, b):
-    return math.log(a, base=2)
+    return math.log(a, b)
 
+def calculate_logarithm(number):
+    if number <= 0:
+        raise ValueError("Логарифм можно вычислить только для положительных чисел")
+    return math.log(number)

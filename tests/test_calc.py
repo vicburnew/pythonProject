@@ -1,6 +1,6 @@
 import pytest
 
-from calc import subtract, add_num, divide
+from calc import subtract, add_num, divide, calc_log, calculate_logarithm
 
 
 def test_add_num():
@@ -21,4 +21,16 @@ def test_divide():
     with pytest.raises(ZeroDivisionError):
         divide(2, 0)
 
+def test_calc_log():
+    assert calc_log(8, 2) == 3
 
+    with pytest.raises(ValueError) as exc_info:
+        calc_log(-1, 2)
+        assert str(exc_info.value) == 1
+
+def test_calculate_logarithm_with_negative_number():
+    with pytest.raises(ValueError) as exc_info:
+        calculate_logarithm(-1)
+
+    # Проверяем, что сообщение об ошибке соответствует ожидаемому
+    assert str(exc_info.value) == "Логарифм можно вычислить только для положительных чисел"
